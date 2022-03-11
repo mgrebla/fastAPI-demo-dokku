@@ -1,9 +1,9 @@
 from pydantic import BaseModel, Field
 
 class ChickenSchema(BaseModel):
-	name: str = Field(...)
+    name: str = Field(...)
 
-	class Config:
+    class Config:
         schema_extra = {
             "example": {
                 "name": "Fred",
