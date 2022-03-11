@@ -5,7 +5,7 @@ from app.server.database import (
     retrieve_chickens,
     add_chicken,
 )
-from app.server.models.student import (
+from app.server.models.chicken import (
     ErrorResponseModel,
     ResponseModel,
     ChickenSchema,
