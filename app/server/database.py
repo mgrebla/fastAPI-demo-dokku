@@ -3,7 +3,7 @@ import motor.motor_asyncio
 
 MONGO_DETAILS = "mongodb://172.17.0.4:27017"
 
-client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
+client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS, username='root', password='example')
 
 database = client.chickens
 
