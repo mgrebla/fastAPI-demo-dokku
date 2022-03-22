@@ -27,5 +27,5 @@ async def retrieve_chickens():
 # Add a new student into to the database
 async def add_chicken(chicken_data: dict) -> dict:
     chicken = await chickens_collection.insert_one(chicken_data)
-    new_chicken = await chickens_collection.find_one({"id": chicken.inserted_id})
+    new_chicken = await chickens_collection.find_one({"_id": chicken.inserted_id})
     return chicken_helper(new_chicken)
