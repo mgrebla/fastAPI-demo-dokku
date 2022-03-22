@@ -18,3 +18,9 @@ async def add_chicken_data(chicken: ChickenSchema = Body(...)):
     chicken = jsonable_encoder(chicken)
     new_chicken = await add_chicken(chicken)
     return ResponseModel(new_chicken, "Chicken added successfully.")
+
+
+@router.get("/", response_description="Get all the chickens from the database")
+async def get_all_chickens():
+    chickens = await retrieve_chickens()
+    return ResponseModel(chickens, "Chickens data retrieved successfully.")
